@@ -1,0 +1,12 @@
+
+<% form_remote_tag(:url => 'routes', :method  => :get, :update => "sidebar") do %>
+	von: <%= text_field_with_auto_complete :route, :from, :autocomplete  => "off", :size => "14"  %>
+	nach: <%= text_field_with_auto_complete :route, :to, :autocomplete  => "off", :size => "14"  %>
+	Wie: <%= select_tag "wie", "<option>RCG</option><option>BruteForce</option>" %>
+	<input style="text-align:right" id="nmb" name="nmb" size="3" type="text" value="10" />
+	<div  style="text-align:right">	
+	<%= submit_tag "suchen" %>
+	</div>
+<% end %>
+
+<div id="sidebar"></div>

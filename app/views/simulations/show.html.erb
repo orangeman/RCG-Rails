@@ -1,0 +1,25 @@
+<p>
+  <b>Status:</b>
+  <%=h @simulation.status %>
+</p>
+
+<p>
+  <b>Anzahl autos:</b>
+  <%=h @simulation.anzahl %>
+</p>
+
+<p>
+	<table>
+	<% @simulation.cars.each do |car| %>
+		<tr>
+			<td>Auto Nr. <%= car.id %>:  </td>
+			<td>von <%= car.route.from %> </td>
+			<td>nach <%= car.route.to %> </td>
+		</tr>	
+	<% end  %>
+	</table>
+</p>
+
+
+<%= link_to 'Edit', edit_simulation_path(@simulation) %> |
+<%= link_to 'Back', simulations_path %>

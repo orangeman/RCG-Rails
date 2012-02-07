@@ -1,0 +1,28 @@
+<p>
+  <b>From:</b>
+  <%=h @route.from %>
+</p>
+
+<p>
+  <b>To:</b>
+  <%=h @route.to %>
+</p>
+
+<p>
+  <b>Distance:</b>
+  <%=h @route.distance %>
+</p>
+
+<p>
+  <b>Detour:</b>
+  <%=h @route.detour %>
+</p>
+
+<p>
+  <b>Time to pickup:</b>
+  <%=h @route.time_to_pickup %>
+</p>
+
+
+<%= link_to 'Edit', edit_route_path(@route) %> |
+<%= link_to 'Back', routes_path %>

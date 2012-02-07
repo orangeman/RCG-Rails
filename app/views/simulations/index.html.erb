@@ -1,0 +1,24 @@
+<h1>Listing simulations</h1>
+
+<table>
+  <tr>
+    <th>Anzahl autos</th>
+    <th>Status</th>
+    <th>Route</th>
+  </tr>
+
+<% for simulation in @simulations %>
+  <tr>
+    <td><%=h simulation.anzahl_autos %></td>
+    <td><%=h simulation.status %></td>
+    <td><%=h simulation.route %></td>
+    <td><%= link_to 'Show', simulation %></td>
+    <td><%= link_to 'Edit', edit_simulation_path(simulation) %></td>
+    <td><%= link_to 'Destroy', simulation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New simulation', new_simulation_path %>

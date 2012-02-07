@@ -1,0 +1,22 @@
+
+<div id="sidebar">
+Time: <%= @time %> Sekunden
+<table>
+  <tr>
+    <th> (From -> To) </th>
+    <th>Det</th>
+    <th>Dist</th>
+    <th>Time2PickUp</th>
+  </tr>
+
+<% for route in @routes %>
+  <tr>
+    <td><a href="#" onclick="showRoute('<%= route.to_text %>');" ><%=h route.to_s %></a></td>
+    <td><%=h route.detour %></td>
+    <td><%=h route.distance %></td>
+    <td><%=h route.time_to_pickup %></td>
+  </tr>
+<% end %>
+</table>
+
+</div>

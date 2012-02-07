@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  anzahl_autos: 1
+  status: MyString
+  route: 
+
+two:
+  anzahl_autos: 1
+  status: MyString
+  route: 

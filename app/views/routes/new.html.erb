@@ -1,0 +1,31 @@
+<h1>New route</h1>
+
+<% form_for(@route) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :from %><br />
+    <%= f.text_field :from %>
+  </p>
+  <p>
+    <%= f.label :to %><br />
+    <%= f.text_field :to %>
+  </p>
+  <p>
+    <%= f.label :distance %><br />
+    <%= f.text_field :distance %>
+  </p>
+  <p>
+    <%= f.label :detour %><br />
+    <%= f.text_field :detour %>
+  </p>
+  <p>
+    <%= f.label :time_to_pickup %><br />
+    <%= f.text_field :time_to_pickup %>
+  </p>
+  <p>
+    <%= f.submit "Create" %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', routes_path %>

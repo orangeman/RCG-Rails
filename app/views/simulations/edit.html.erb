@@ -1,0 +1,24 @@
+<h1>Editing simulation</h1>
+
+<% form_for(@simulation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :anzahl_autos %><br />
+    <%= f.text_field :anzahl_autos %>
+  </p>
+  <p>
+    <%= f.label :status %><br />
+    <%= f.text_field :status %>
+  </p>
+  <p>
+    <%= f.label :route %><br />
+    <%= f.text_field :route %>
+  </p>
+  <p>
+    <%= f.submit "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @simulation %> |
+<%= link_to 'Back', simulations_path %>
